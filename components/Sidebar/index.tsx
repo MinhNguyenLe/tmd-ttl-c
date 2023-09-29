@@ -260,7 +260,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               {/* <!-- Menu Item Time to Learn --> */}
               <SidebarLinkGroup
                 activeCondition={
-                  pathname === "/time-to-learn" || pathname.includes("time-to-learn")
+                  pathname === "/time-to-learn" ||
+                  pathname.includes("time-to-learn")
                 }
               >
                 {(handleClick, open) => {
@@ -339,11 +340,23 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <Link
                               href="/time-to-learn/import-from-notion"
                               className={`first-letter:group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
-                                pathname === "/time-to-learn/import-from-notion" &&
+                                pathname ===
+                                  "/time-to-learn/import-from-notion" &&
                                 "text-white"
                               }`}
                             >
                               Import from Notion
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/time-to-learn/report"
+                              className={`first-letter:group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                pathname === "/time-to-learn/report" &&
+                                "text-white"
+                              }`}
+                            >
+                              Report
                             </Link>
                           </li>
                         </ul>
